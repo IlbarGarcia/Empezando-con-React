@@ -1,4 +1,5 @@
-import './Tarjeta.css' //importamos el estilo que le vamos a dar a la tarjeta
+import './Tarjeta.css' //importamos el estilo que le vamos a dar a la tarjeta//
+import PropTypes from'prop-types' //importamos la libreria que instalamos 
 const usuario ={nombre:"Ilbar",apellido:"Garcia",edad:30} //creamos un objeto usuario
 const edadUsuario= edad => edad>33 //esta funcion recibe como parametro un numero , si este numero es mayor a 33 devuelve un true, sino un false
  
@@ -21,6 +22,13 @@ const Curso =({apellido,nombre})=> /*recibimos las propiedades y las desestructu
     </div>  
  )
   
-
+Curso.propTypes ={ //decimos que tipo de dato va a recibir cada propiedad en este caso es string
+  apellido:PropTypes.string,
+  nombre:PropTypes.string
+}
+Curso.defaultProps={ //agregamos los valores por defecto que tendria el e;emento curso
+  apellido: 'no se encontro un apellido valido', //este es el valor por defecto para apellido
+  nombre: 'no se encontro un nombre valido' //este es el valor por defecto para nombre
+}
 
 export default Curso; //exportamos el elemento que creamos

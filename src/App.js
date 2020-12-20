@@ -6,8 +6,8 @@ import './App.css'; //aqui importamos el estilo para este elemento el cual se en
 const App= () => (
     <div>
       <Curso nombre='Ilbar' apellido="Garcia" /> {/*reutilizamos el elemento que creamos */}
-      <Curso nombre='Erika' apellido="Castro" /> {/*usamos el elemento curso y le pasamos de forma dinamica dos propieades */}
-      <Curso nombre='Alberto' apellido="Barros" />
+      <Curso /> {/*usamos el elemento curso y le pasamos de forma dinamica dos propieades */}
+      <Curso /> {/*aqui no le pasmos ningun parametro, para que los proptypes carguen los valores por defecto */}
     </div>
   );
 
