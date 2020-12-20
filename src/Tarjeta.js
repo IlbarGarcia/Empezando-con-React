@@ -4,14 +4,14 @@ const edadUsuario= edad => edad>33 //esta funcion recibe como parametro un numer
  
 
 
-const Curso =()=>{
- return( //creamos un componente que devuelve un elemento que nos permite crear una tarjeta  
+const Curso =({apellido,nombre})=> /*recibimos las propiedades y las desestructuramos para solo recibir apellido y nombre */
+ ( //creamos un componente que devuelve un elemento que nos permite crear una tarjeta  
     <div className="card-container">
       <div className="header">
         <a href="">
           <img src='https://lh3.googleusercontent.com/proxy/5OGshVCrnpBE37pP08458Tdjynee-qwT1CZXQzw9AaWCpTZzsLa55UBfXGri8nxbMKRn2K7r6zMvlxCVbomUqqR_WSGU6L0hbUf4Qk7oj9OUB7a_H-1VjSxaFd0ogdRqLTQC-fAK' alt=""/>
         </a>
-        <h2>{`${usuario.nombre} ${usuario.apellido}`}</h2> {/*dentro de las llaves podemos escribir javascript puro, es decir podemos hacer referncia a una variable creada o a un obejto o a una funcion , cualquier cosa que sea javacript puro */}
+        <h2>{`${nombre} ${apellido}`}</h2> {/*dentro de las llaves podemos escribir javascript puro, es decir podemos hacer referncia a una variable creada o a un obejto o a una funcion , cualquier cosa que sea javacript puro, dentro de las llaves recibimos el valor de nombre que recibimos como props  */}
         <h3>{edadUsuario(usuario.edad)?<h1>es mayor</h1>:<h3>es menor</h3>}</h3> {/*aqui dentro de las llaves llamamos la funcion, y utilizamos operadores ternarios para validar, ya que no podemos usar if observemos que en el opreador ternario podemos devolver un texto un elemento o un componente  */}
         <h4>Desarrollador Web</h4>
       </div>
@@ -22,5 +22,5 @@ const Curso =()=>{
  )
   
 
-}
+
 export default Curso; //exportamos el elemento que creamos
